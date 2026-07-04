@@ -1,0 +1,67 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "neutral",
+&"description": "",
+&"display_name": "Kokichi Ouma",
+&"mirror": false,
+&"nicknames": ["Kokichi"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"chirpy": {
+"export_overrides": {
+"image": "\"res://dialogue/characters/kokichi_ouma/assets/stand_005_001.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"laughing": {
+"export_overrides": {
+"image": "\"res://dialogue/characters/kokichi_ouma/assets/stand_005_010.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutral": {
+"export_overrides": {
+"image": "\"res://dialogue/characters/kokichi_ouma/assets/stand_005_000.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sad": {
+"export_overrides": {
+"image": "\"res://dialogue/characters/kokichi_ouma/assets/stand_005_008.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sinister": {
+"export_overrides": {
+"image": "\"res://dialogue/characters/kokichi_ouma/assets/stand_005_007.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

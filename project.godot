@@ -20,9 +20,18 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"kaede_akamatsu": "res://dialogue/characters/kaede_akamatsu/kaede_akamatsu.dch",
+"kaito_momota": "res://dialogue/characters/kaito_momota/kaito_momota.dch",
+"kokichi_ouma": "res://dialogue/characters/kokichi_ouma/kokichi_ouma.dch",
+"shuichi_saihara": "res://dialogue/characters/shuichi_saihara/shuichi_saihara.dch"
+}
 directories/dtl_directory={}
 layout/style_directory={}
+layout/style_list=[]
+layout/default_style="Default"
+glossary/default_case_sensitive=true
+variables={}
 
 [editor_plugins]
 
