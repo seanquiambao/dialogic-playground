@@ -418,19 +418,19 @@ func join_character(character:DialogicCharacter, portrait:String,  position_id:S
 	info.merge(dialogic.current_state_info['portraits'][character.get_identifier()])
 	character_joined.emit(info)
 
-	if animation_name.is_empty():
-		animation_name = ProjectSettings.get_setting('dialogic/animations/join_default', "Fade In Up")
-		animation_length = _get_join_default_length()
-		animation_wait = ProjectSettings.get_setting('dialogic/animations/join_default_wait', true)
-
-	animation_name = DialogicPortraitAnimationUtil.guess_animation(animation_name, DialogicPortraitAnimationUtil.AnimationType.IN)
-
-	if animation_name and animation_length > 0:
-		var anim: DialogicAnimation = _animate_node(character_node, animation_name, animation_length)
-		if animation_wait:
-			dialogic.current_state = DialogicGameHandler.States.ANIMATING
-			await anim.finished
-			dialogic.current_state = DialogicGameHandler.States.IDLE
+	#if animation_name.is_empty():
+		#animation_name = ProjectSettings.get_setting('dialogic/animations/join_default', "Fade In Up")
+		#animation_length = _get_join_default_length()
+		#animation_wait = ProjectSettings.get_setting('dialogic/animations/join_default_wait', true)
+#
+	#animation_name = DialogicPortraitAnimationUtil.guess_animation(animation_name, DialogicPortraitAnimationUtil.AnimationType.IN)
+#
+	#if animation_name and animation_length > 0:
+		#var anim: DialogicAnimation = _animate_node(character_node, animation_name, animation_length)
+		#if animation_wait:
+			#dialogic.current_state = DialogicGameHandler.States.ANIMATING
+			#await anim.finished
+			#dialogic.current_state = DialogicGameHandler.States.IDLE
 
 	return character_node
 
