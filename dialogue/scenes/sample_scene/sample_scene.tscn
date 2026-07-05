@@ -25,7 +25,7 @@ character = ExtResource("4_rnkgc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60046613, 0, -2.6657367)
 character = ExtResource("5_rnkgc")
 
-[node name="Kaede" parent="Characters" index="3" unique_id=993655129 instance=ExtResource("2_i7sqc")]
+[node name="Kaede" parent="Characters" index="3" unique_id=993655129 groups=["Characters"] instance=ExtResource("2_i7sqc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4465842, 0, -1.6432045)
 character = ExtResource("6_qjcoc")
 
