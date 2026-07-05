@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cf8lyyme5nl41"]
+
+[ext_resource type="Script" uid="uid://fhh0gtovrxbh" path="res://dialogue/scenes/common/character/dialogue_character.gd" id="1_5bspk"]
+[ext_resource type="Texture2D" uid="uid://o675wofuh1k1" path="res://dialogue/characters/shuichi_saihara/assets/stand_000_000.png" id="2_cpas7"]
+
+[node name="DialogueCharacter" type="Node3D" unique_id=2059834064]
+script = ExtResource("1_5bspk")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1968780357]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+texture = ExtResource("2_cpas7")
