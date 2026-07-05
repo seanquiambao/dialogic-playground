@@ -2,5 +2,6 @@
 
 [ext_resource type="Script" uid="uid://03lhohpvvsq7" path="res://dialogue/scenes/common/camera/dialogue_camera.gd" id="1_43swb"]
 
-[node name="DialogueCamera" type="Node3D" unique_id=1707576563]
+[node name="DialogueCamera" type="Camera3D" unique_id=2116641368]
+fov = 45.0
 script = ExtResource("1_43swb")

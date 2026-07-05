@@ -10,7 +10,6 @@ func _ready() -> void:
 	var portraits_info = character.portraits
 	for key in portraits_info.keys():
 		var image_path = portraits_info[key]["export_overrides"]["image"].replace("\"", "")
-		print(image_path)
 		if ResourceLoader.exists(image_path):
 			var image_texture = ResourceLoader.load(image_path)
 			_portraits[key] = image_texture

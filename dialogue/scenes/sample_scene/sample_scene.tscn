@@ -4,19 +4,30 @@
 [ext_resource type="PackedScene" uid="uid://cf8lyyme5nl41" path="res://dialogue/scenes/common/character/dialogue_character.tscn" id="2_i7sqc"]
 [ext_resource type="Resource" uid="uid://yvi8vh3hq73h" path="res://dialogue/characters/kaito_momota/kaito_momota.dch" id="3_av8ew"]
 [ext_resource type="Resource" uid="uid://djsawcwvixr75" path="res://dialogue/characters/shuichi_saihara/shuichi_saihara.dch" id="4_rnkgc"]
+[ext_resource type="PackedScene" uid="uid://xsvp0nywgcg2" path="res://dialogue/scenes/common/camera/dialogue_camera.tscn" id="5_av8ew"]
+[ext_resource type="Resource" uid="uid://do2lfvjaffvqj" path="res://dialogue/characters/kokichi_ouma/kokichi_ouma.dch" id="5_rnkgc"]
+[ext_resource type="Resource" uid="uid://cpnu7okqpykl4" path="res://dialogue/characters/kaede_akamatsu/kaede_akamatsu.dch" id="6_qjcoc"]
 
 [node name="BaseScene" unique_id=923098023 instance=ExtResource("1_ffkly")]
 timeline = "timeline"
 
 [node name="Characters" type="Node" parent="." index="0" unique_id=423588960]
 
-[node name="Kaito" parent="Characters" index="0" unique_id=2059834064 instance=ExtResource("2_i7sqc")]
+[node name="Kaito" parent="Characters" index="0" unique_id=2059834064 groups=["Characters"] instance=ExtResource("2_i7sqc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60565, 0, 0)
 character = ExtResource("3_av8ew")
 
-[node name="Shuichi" parent="Characters" index="1" unique_id=455220856 instance=ExtResource("2_i7sqc")]
+[node name="Shuichi" parent="Characters" index="1" unique_id=455220856 groups=["Characters"] instance=ExtResource("2_i7sqc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4810033, 0, 0)
 character = ExtResource("4_rnkgc")
 
-[node name="Camera3D" type="Camera3D" parent="." index="1" unique_id=509394148]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6949098, 4.633168)
+[node name="Kokichi" parent="Characters" index="2" unique_id=480836861 groups=["Characters"] instance=ExtResource("2_i7sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60046613, 0, -2.6657367)
+character = ExtResource("5_rnkgc")
+
+[node name="Kaede" parent="Characters" index="3" unique_id=993655129 instance=ExtResource("2_i7sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4465842, 0, -1.6432045)
+character = ExtResource("6_qjcoc")
+
+[node name="DialogueCamera" parent="." index="1" unique_id=2116641368 instance=ExtResource("5_av8ew")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.905352)
