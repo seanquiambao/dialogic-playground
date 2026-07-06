@@ -555,17 +555,17 @@ func leave_character(character: DialogicCharacter, animation_name:= "", animatio
 	if not animation_name.is_empty():
 		var character_node := get_character_node(character)
 
-		var animation := _animate_node(character_node, animation_name, animation_length, 1, true)
-		if animation_length > 0:
-			if animation_wait:
-				dialogic.current_state = DialogicGameHandler.States.ANIMATING
-				await animation.finished
-				dialogic.current_state = DialogicGameHandler.States.IDLE
-				remove_character(character)
-			else:
-				animation.finished.connect(func(): remove_character(character))
-		else:
-			remove_character(character)
+		#var animation := _animate_node(character_node, animation_name, animation_length, 1, true)
+		#if animation_length > 0:
+			#if animation_wait:
+				#dialogic.current_state = DialogicGameHandler.States.ANIMATING
+				#await animation.finished
+				#dialogic.current_state = DialogicGameHandler.States.IDLE
+				#remove_character(character)
+			#else:
+				#animation.finished.connect(func(): remove_character(character))
+		#else:
+		remove_character(character)
 
 
 ## Removes all joined characters with a given animation or the default animation.
