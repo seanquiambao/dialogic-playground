@@ -18,4 +18,6 @@ func _process(delta: float) -> void:
 	_current_position = new_position
 
 func _on_speaker_updated(character: DialogicCharacter):
+	if not character:
+		return
 	_target_position = characters[character.get_character_name()].position + Vector3(0, 1, 2)

@@ -3,9 +3,48 @@
 [ext_resource type="Script" uid="uid://fhh0gtovrxbh" path="res://dialogue/scenes/common/character/dialogue_character.gd" id="1_5bspk"]
 [ext_resource type="Texture2D" uid="uid://o675wofuh1k1" path="res://dialogue/characters/shuichi_saihara/assets/stand_000_000.png" id="2_cpas7"]
 
+[sub_resource type="Animation" id="Animation_cpas7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c4qm2"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rj5wh"]
+_data = {
+&"RESET": SubResource("Animation_cpas7"),
+&"fade_out": SubResource("Animation_c4qm2")
+}
+
 [node name="DialogueCharacter" type="Node3D" unique_id=2059834064]
 script = ExtResource("1_5bspk")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1968780357]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 texture = ExtResource("2_cpas7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=246948146]
+libraries/ = SubResource("AnimationLibrary_rj5wh")

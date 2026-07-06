@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://crlbahq6snouu" path="res://dialogue/scenes/common/base/dialogue_base.tscn" id="1_ffkly"]
 
 [node name="BaseScene" unique_id=923098023 instance=ExtResource("1_ffkly")]
-timeline = "timeline"
+timeline = "timelinev2"
 
 [node name="DialogueCharacter1" parent="Characters" parent_id_path=PackedInt32Array(1351440196) index="0" unique_id=2059834064]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5607977, 0, 0.70501804)
@@ -12,10 +12,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5607977, 0, 0.70501804)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9311563, 0, 0.8040645)
 
 [node name="DialogueCharacter3" parent="Characters" parent_id_path=PackedInt32Array(1351440196) index="2" unique_id=923096241]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6082318, 0, -0.3198805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6447735, 0, -0.3198805)
 
 [node name="DialogueCharacter4" parent="Characters" parent_id_path=PackedInt32Array(1351440196) index="3" unique_id=1425429669]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4648108, 0, -5.0777864)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4648108, 0, -3.5595489)
 
 [node name="DialogueCamera" parent="." index="1" unique_id=2116641368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.573423)
