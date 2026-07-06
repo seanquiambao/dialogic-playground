@@ -34,3 +34,8 @@ func _on_character_left(info: Dictionary):
 	if(info.character.get_character_name() != _character.get_character_name()):
 		return
 	animation_player.play("fade_out")
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_out":
+		_portraits = {}
+		_character = null
