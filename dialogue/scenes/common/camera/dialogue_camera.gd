@@ -5,6 +5,8 @@ var characters: Dictionary[String, Node3D]
 var _target_position: Vector3
 var _current_position: Vector3
 
+const VALID_VFX = ["shocked"]
+
 func _ready() -> void:
 	Dialogic.Text.speaker_updated.connect(_on_speaker_updated)
 
