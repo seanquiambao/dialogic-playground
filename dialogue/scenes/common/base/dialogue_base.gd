@@ -16,8 +16,7 @@ func _on_character_joined(info: Dictionary) -> void:
 	var character: DialogicCharacter = info.character
 
 	for character_node in characters.get_children():
-		if character_node._character != null:
-			continue
-		character_node.set_character(character)
-		dialogue_camera.register_character(character, character_node)
-		break
+		if character_node._character == null:
+			character_node.set_character(character)
+			dialogue_camera.register_character(character, character_node)
+			break
