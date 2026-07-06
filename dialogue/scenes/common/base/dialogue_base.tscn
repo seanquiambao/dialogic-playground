@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://crlbahq6snouu"]
 
 [ext_resource type="Script" uid="uid://6qngf2lhdeth" path="res://dialogue/scenes/common/base/dialogue_base.gd" id="1_mhfoa"]
+[ext_resource type="PackedScene" uid="uid://xsvp0nywgcg2" path="res://dialogue/scenes/common/camera/dialogue_camera.tscn" id="2_sy72e"]
+[ext_resource type="PackedScene" uid="uid://cf8lyyme5nl41" path="res://dialogue/scenes/common/character/dialogue_character.tscn" id="2_vr54q"]
 
 [node name="BaseScene" type="Node3D" unique_id=923098023]
 script = ExtResource("1_mhfoa")
+
+[node name="Characters" type="Node" parent="." unique_id=1351440196 groups=["Characters"]]
+
+[node name="DialogueCharacter1" parent="Characters" unique_id=2059834064 instance=ExtResource("2_vr54q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0982747, 0, 0)
+
+[node name="DialogueCharacter2" parent="Characters" unique_id=760282033 instance=ExtResource("2_vr54q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3630524, 0, 0)
+
+[node name="DialogueCharacter3" parent="Characters" unique_id=923096241 instance=ExtResource("2_vr54q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5651515)
+
+[node name="DialogueCharacter4" parent="Characters" unique_id=1425429669 instance=ExtResource("2_vr54q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.403328, 0, -3.027614)
+
+[node name="DialogueCamera" parent="." unique_id=2116641368 instance=ExtResource("2_sy72e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.384845)

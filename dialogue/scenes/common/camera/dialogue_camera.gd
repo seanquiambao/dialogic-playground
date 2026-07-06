@@ -4,12 +4,13 @@ var characters: Dictionary[String, Node3D]
 
 var _target_position: Vector3
 var _current_position: Vector3
+
 func _ready() -> void:
 	Dialogic.Text.speaker_updated.connect(_on_speaker_updated)
-	var characters_in_scene = get_tree().get_nodes_in_group("Characters")
-	for scene_character in characters_in_scene:
-		var dialogic_character: DialogicCharacter = scene_character.character
-		characters.set(dialogic_character.get_character_name(), scene_character)
+
+func register_character(character: DialogicCharacter, scene_character: Node3D) -> void:
+	var character_name: String = character.get_character_name()
+	characters.set(character_name, scene_character)
 
 func _process(delta: float) -> void:
 	var new_position = _current_position.move_toward(_target_position, 0.5)

@@ -2,11 +2,12 @@ extends Node3D
 
 @onready var sprite_3d: Sprite3D = $Sprite3D
 
-@export var character: DialogicCharacter
+var character: DialogicCharacter
 
 var _portraits: Dictionary = {}
-func _ready() -> void:
-	Dialogic.Text.about_to_show_text.connect(_on_about_to_show_text)
+
+func set_character(new_character: DialogicCharacter) -> void:
+	character = new_character
 	var portraits_info = character.portraits
 	for key in portraits_info.keys():
 		var image_path = portraits_info[key]["export_overrides"]["image"].replace("\"", "")
@@ -14,6 +15,9 @@ func _ready() -> void:
 			var image_texture = ResourceLoader.load(image_path)
 			_portraits[key] = image_texture
 	sprite_3d.texture = _portraits["neutral"]
+
+func _ready() -> void:
+	Dialogic.Text.about_to_show_text.connect(_on_about_to_show_text)
 
 func _on_about_to_show_text(info: Dictionary) -> void:
 	var portrait_name: String = info.portrait
