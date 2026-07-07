@@ -6,8 +6,6 @@ class_name DialogueCharacter
 
 @export var timeline: String
 
-var dialogue_character = preload("res://dialogue/scenes/common/character/dialogue_character.tscn")
-
 func _ready() -> void:
 	Dialogic.Portraits.character_joined.connect(_on_character_joined)
 	Dialogic.start(timeline)
