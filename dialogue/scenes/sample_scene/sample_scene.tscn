@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://crlbahq6snouu" path="res://dialogue/scenes/common/base/dialogue_base.tscn" id="1_ffkly"]
 
 [node name="BaseScene" unique_id=923098023 instance=ExtResource("1_ffkly")]
-timeline = "timeline"
+timeline = "timelinev2"
 
 [node name="DialogueCharacter2" parent="Characters" parent_id_path=PackedInt32Array(1351440196) index="1" unique_id=760282033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15459049, 0, -1.5702684)
