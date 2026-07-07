@@ -18,8 +18,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3167903, 0, -1.5702684)
 [node name="DialogueCharacter3" parent="Characters" unique_id=923096241 instance=ExtResource("2_vr54q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.428935, 0, -3.5651515)
 
-[node name="DialogueCharacter4" parent="Characters" unique_id=1425429669 instance=ExtResource("2_vr54q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7371202, 0, -1.014818)
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Characters" unique_id=1539067053]
+offset_left = 832.0
+offset_top = 152.0
+offset_right = 1216.0
+offset_bottom = 664.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="Characters/SubViewportContainer" unique_id=1438953177]
+handle_input_locally = false
+size = Vector2i(300, 400)
+render_target_update_mode = 4
+
+[node name="ProtagonistCharacter" parent="Characters/SubViewportContainer/SubViewport" unique_id=1425429669 instance=ExtResource("2_vr54q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+is_protagonist = true
+
+[node name="Camera3D" type="Camera3D" parent="Characters/SubViewportContainer/SubViewport" unique_id=1624640150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 2)
+fov = 40.0
 
 [node name="DialogueCamera" parent="." unique_id=2116641368 instance=ExtResource("2_sy72e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.384845)

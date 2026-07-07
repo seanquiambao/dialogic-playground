@@ -14,9 +14,13 @@ func _ready() -> void:
 
 func _on_character_joined(info: Dictionary) -> void:
 	var character: DialogicCharacter = info.character
+	var is_protagonist: bool = character.description.contains("protagonist")
+	for character_node in characters.find_children("*Character*"):
+		if is_protagonist and not character_node.is_protagonist:
+			continue
+		if character_node._character:
+			continue
 
-	for character_node in characters.get_children():
-		if character_node._character == null:
-			character_node.set_character(character)
-			dialogue_camera.register_character(character, character_node)
-			break
+		character_node.set_character(character)
+		dialogue_camera.register_character(character, character_node)
+		break
