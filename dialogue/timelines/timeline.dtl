@@ -1,4 +1,5 @@
 [style name="major_style"]
+[background scene="res://dialogue/scenes/sample_scene/sample_scene.tscn" fade="0.0"]
 join shuichi_saihara center
 join kaito_momota center
 join kaede_akamatsu center
