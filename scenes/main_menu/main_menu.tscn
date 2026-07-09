@@ -49,6 +49,7 @@ layout_mode = 2
 [node name="SubViewport" type="SubViewport" parent="CanvasLayer/VBoxContainer/SubViewportContainer" unique_id=1763775258]
 unique_name_in_owner = true
 handle_input_locally = false
+size = Vector2i(400, 512)
 render_target_update_mode = 4
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

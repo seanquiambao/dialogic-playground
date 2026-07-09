@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://riyvu11fig8q"]
+
+[ext_resource type="PackedScene" uid="uid://crlbahq6snouu" path="res://dialogue/scenes/common/base/dialogue_base.tscn" id="1_bggfw"]
+[ext_resource type="Texture2D" uid="uid://dwj2vxemga11v" path="res://dialogue/scenes/sample_scene/assets/textures/sc1_wall04_c.png" id="2_lh2ib"]
+[ext_resource type="Texture2D" uid="uid://rl4tbsm0y06d" path="res://dialogue/scenes/sample_scene/assets/textures/sc1_wall06_c.png" id="3_lfn8q"]
+[ext_resource type="Texture2D" uid="uid://bit04uu0bn44i" path="res://dialogue/scenes/sample_scene/assets/textures/ct_tree06a.png" id="4_o02vi"]
+
+[node name="BaseScene" unique_id=923098023 instance=ExtResource("1_bggfw")]
+
+[node name="Background" type="Node" parent="." index="0" unique_id=894256784]
+
+[node name="Walls" type="Node" parent="Background" index="0" unique_id=139243659]
+
+[node name="Wall" type="Sprite3D" parent="Background/Walls" index="0" unique_id=1118501101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2493894, 3.32171, -6.078)
+texture = ExtResource("2_lh2ib")
+
+[node name="Wall2" type="Sprite3D" parent="Background/Walls" index="1" unique_id=1139977660]
+transform = Transform3D(0.8239877, 0, 0.5666076, 0, 1, 0, -0.5666076, 0, 0.8239877, -10.44739, 3.32171, -3.609)
+texture = ExtResource("3_lfn8q")
+
+[node name="Foreground" type="Node" parent="Background" index="1" unique_id=1114049999]
+
+[node name="Sprite3D" type="Sprite3D" parent="Background/Foreground" index="0" unique_id=1573321225]
+transform = Transform3D(0.6, 0, 0, 0, 0.39999998, 0, 0, 0, 1, -3.3298826, 0, -4.3661604)
+texture = ExtResource("4_o02vi")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Background/Foreground" index="1" unique_id=34156824]
+transform = Transform3D(0.4819215, 0, 0.59570634, 0, 0.39999998, 0, -0.35742378, 0, 0.80320233, -3.945619, 0, -4.3661604)
+texture = ExtResource("4_o02vi")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Background/Foreground" index="2" unique_id=553824274]
+transform = Transform3D(0.46139216, 0, -0.6392646, 0, 0.39999995, 0, 0.3835588, 0, 0.7689868, -2.4948554, 0, -4.3661604)
+texture = ExtResource("4_o02vi")

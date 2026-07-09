@@ -26,12 +26,16 @@ func _ready() -> void:
 	Dialogic.Portraits.character_left.connect(_on_character_left)
 
 func _on_about_to_show_text(info: Dictionary) -> void:
+	if not _character or not info.character:
+		return
+	if info.character.get_character_name() != _character.get_character_name():
+		return
 	var portrait_name: String = info.portrait
 	if _portraits.has(portrait_name):
 		sprite_3d.texture = _portraits[portrait_name]
 
 func _on_character_left(info: Dictionary):
-	if not _character:
+	if not _character or not info.character:
 		return
 	if(info.character.get_character_name() != _character.get_character_name()):
 		return

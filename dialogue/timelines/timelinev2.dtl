@@ -1,5 +1,5 @@
 [style name="major_style"]
-[background scene="res://dialogue/scenes/sample_scene/sample_scene.tscn" fade="0.0"]
+[background scene="res://dialogue/scenes/sample_scene/sample_scene_v2.tscn" fade="0.0"]
 join kaito_momota center
 join shuichi_saihara center
 kaito_momota (nervous): hey sorry bro i was irritated for no reason
