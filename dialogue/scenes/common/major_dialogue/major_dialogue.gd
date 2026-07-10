@@ -1,6 +1,8 @@
 extends Control
 @onready var character_subviewport: SubViewport = $CharacterContainer/CharacterSubviewport
 @onready var protagonist_subviewport: SubViewport = $ProtagonistContainer/ProtagonistSubviewport
+@onready var character_animation_player: AnimationPlayer = $CharacterContainer/CharacterAnimationPlayer
+@onready var protagonist_animation_player: AnimationPlayer = $ProtagonistContainer/ProtagonistAnimationPlayer
 @onready var protagonist_scene = preload("res://dialogue/scenes/common/major_dialogue/characters/protagonist_character.tscn")
 
 var current_timeline: DialogicTimeline
@@ -50,3 +52,6 @@ func _on_background_changed(info: Dictionary) -> void:
 	
 	setup_character_view(info)
 	setup_protagonist_view(info)
+	protagonist_animation_player.play("join")
+	character_animation_player.play("join")
+	
