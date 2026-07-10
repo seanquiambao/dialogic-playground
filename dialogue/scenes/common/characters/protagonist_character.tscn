@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://gdu7tcj4dcgw"]
+
+[ext_resource type="Script" uid="uid://bc1av3rpoa6an" path="res://dialogue/scenes/common/characters/protagonist_character.gd" id="1_7oikw"]
+[ext_resource type="PackedScene" uid="uid://cf8lyyme5nl41" path="res://dialogue/scenes/common/characters/character.tscn" id="1_qmilj"]
+
+[node name="PrimaryCharacter" type="Node3D" unique_id=1140371268]
+script = ExtResource("1_7oikw")
+
+[node name="CharacterNode" parent="." unique_id=2059834064 instance=ExtResource("1_qmilj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1631351286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 2)
+current = true
+fov = 40.0
+
+[node name="Background" type="Sprite3D" parent="." unique_id=1200267769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.303557, 3.8890326, -1.0751278)

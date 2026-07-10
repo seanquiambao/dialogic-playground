@@ -1,7 +1,5 @@
 extends Node3D
 
-@export var is_protagonist: bool = false
-
 @onready var sprite_3d: Sprite3D = $Sprite3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
