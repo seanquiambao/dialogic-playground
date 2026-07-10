@@ -1,6 +1,6 @@
 extends Node
 
-signal loading_finished
+signal dialogue_ended
 
-func await_loading() -> void:
-	await loading_finished
+func await_dialogue_ended() -> void:
+	await dialogue_ended

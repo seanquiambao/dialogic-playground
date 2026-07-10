@@ -19,6 +19,22 @@ tracks/0/keys = {
 "values": [Vector2(162, 698)]
 }
 
+[sub_resource type="Animation" id="Animation_m6iup"]
+resource_name = "exit"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(150, 100), Vector2(150, 698)]
+}
+
 [sub_resource type="Animation" id="Animation_rnsvq"]
 resource_name = "join"
 length = 0.25
@@ -38,6 +54,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m6iup"]
 _data = {
 &"RESET": SubResource("Animation_ublp4"),
+&"exit": SubResource("Animation_m6iup"),
 &"join": SubResource("Animation_rnsvq")
 }
 
@@ -54,6 +71,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1194, 123)]
+}
+
+[sub_resource type="Animation" id="Animation_tdx4m"]
+resource_name = "exit"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(767, 100), Vector2(1194, 100)]
 }
 
 [sub_resource type="Animation" id="Animation_w52ep"]
@@ -75,6 +108,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ublp4"]
 _data = {
 &"RESET": SubResource("Animation_46vf4"),
+&"exit": SubResource("Animation_tdx4m"),
 &"join": SubResource("Animation_w52ep")
 }
 

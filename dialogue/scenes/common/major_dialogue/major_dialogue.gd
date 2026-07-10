@@ -13,6 +13,7 @@ func _ready() -> void:
 	clear_viewports()
 	Dialogic.Backgrounds.background_changed.connect(_on_background_changed)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func clear_viewports() -> void:
 	for child in character_subviewport.get_children():
@@ -49,4 +50,10 @@ func _on_background_changed(info: Dictionary) -> void:
 	setup_protagonist_view(info)
 	protagonist_animation_player.play("join")
 	character_animation_player.play("join")
+	
+func _on_dialogic_signal(argument: String) -> void:
+	match argument:
+		"play_exit":
+			protagonist_animation_player.play("exit")
+			character_animation_player.play("exit")
 	
