@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bqo757on42lmi"]
+
+[ext_resource type="Script" uid="uid://3h3ty1003rwh" path="res://dialogue/scenes/common/major_dialogue/major_dialogue.gd" id="1_46vf4"]
+[ext_resource type="PackedScene" uid="uid://d3tcma4en6ryp" path="res://dialogue/scenes/sample_scene/sample_scene.tscn" id="2_w52ep"]
+[ext_resource type="PackedScene" uid="uid://gdu7tcj4dcgw" path="res://dialogue/scenes/common/major_dialogue/characters/protagonist_character.tscn" id="3_ublp4"]
+
+[node name="MajorDialogue" type="Control" unique_id=1191741729]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_46vf4")
+
+[node name="CharacterContainer" type="SubViewportContainer" parent="." unique_id=1658214429]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 73.0
+offset_right = 674.0
+offset_bottom = 585.0
+
+[node name="CharacterSubviewport" type="SubViewport" parent="CharacterContainer" unique_id=1208112711]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="BaseScene" parent="CharacterContainer/CharacterSubviewport" unique_id=923098023 instance=ExtResource("2_w52ep")]
+
+[node name="ProtagonistContainer" type="SubViewportContainer" parent="." unique_id=2026245687]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 83.0
+offset_right = 1105.0
+offset_bottom = 595.0
+
+[node name="ProtagonistSubviewport" type="SubViewport" parent="ProtagonistContainer" unique_id=281160769]
+handle_input_locally = false
+size = Vector2i(350, 512)
+render_target_update_mode = 4
+
+[node name="PrimaryCharacter" parent="ProtagonistContainer/ProtagonistSubviewport" unique_id=1140371268 instance=ExtResource("3_ublp4")]

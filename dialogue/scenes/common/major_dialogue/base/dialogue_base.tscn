@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://crlbahq6snouu"]
 
-[ext_resource type="Script" uid="uid://6qngf2lhdeth" path="res://dialogue/scenes/common/base/dialogue_base.gd" id="1_mhfoa"]
-[ext_resource type="PackedScene" uid="uid://xsvp0nywgcg2" path="res://dialogue/scenes/common/camera/dialogue_camera.tscn" id="2_sy72e"]
-[ext_resource type="PackedScene" uid="uid://cf8lyyme5nl41" path="res://dialogue/scenes/common/characters/character.tscn" id="2_vr54q"]
+[ext_resource type="Script" uid="uid://6qngf2lhdeth" path="res://dialogue/scenes/common/major_dialogue/base/dialogue_base.gd" id="1_mhfoa"]
+[ext_resource type="PackedScene" uid="uid://xsvp0nywgcg2" path="res://dialogue/scenes/common/major_dialogue/camera/dialogue_camera.tscn" id="2_sy72e"]
+[ext_resource type="PackedScene" uid="uid://cf8lyyme5nl41" path="res://dialogue/scenes/common/major_dialogue/characters/character.tscn" id="2_vr54q"]
 
 [node name="BaseScene" type="Node3D" unique_id=923098023]
 script = ExtResource("1_mhfoa")

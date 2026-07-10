@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cf8lyyme5nl41"]
 
-[ext_resource type="Script" uid="uid://fhh0gtovrxbh" path="res://dialogue/scenes/common/characters/character.gd" id="1_6xwxs"]
+[ext_resource type="Script" uid="uid://fhh0gtovrxbh" path="res://dialogue/scenes/common/major_dialogue/characters/character.gd" id="1_6xwxs"]
 [ext_resource type="Texture2D" uid="uid://o675wofuh1k1" path="res://dialogue/characters/shuichi_saihara/assets/stand_000_000.png" id="2_u2gjn"]
 
 [sub_resource type="Animation" id="Animation_cpas7"]

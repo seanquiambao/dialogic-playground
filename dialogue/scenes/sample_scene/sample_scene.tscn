@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3tcma4en6ryp"]
 
-[ext_resource type="PackedScene" uid="uid://crlbahq6snouu" path="res://dialogue/scenes/common/base/dialogue_base.tscn" id="1_ffkly"]
+[ext_resource type="PackedScene" uid="uid://crlbahq6snouu" path="res://dialogue/scenes/common/major_dialogue/base/dialogue_base.tscn" id="1_ffkly"]
 
 [node name="BaseScene" unique_id=923098023 instance=ExtResource("1_ffkly")]
 
