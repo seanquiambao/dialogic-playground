@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://xfhloxf4ye7g" path="res://dialogue/timelines/timelinev2.dtl" id="4_3ovsr"]
 
 [node name="MainMenu" type="Control" unique_id=1588386260]
+z_index = -5
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_fsom3")

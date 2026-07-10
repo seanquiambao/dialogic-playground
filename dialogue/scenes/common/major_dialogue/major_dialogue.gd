@@ -33,7 +33,6 @@ func _on_timeline_ended() -> void:
 
 func setup_character_view(info: Dictionary) -> void:
 	var scene: PackedScene = load(info.scene)
-	character_subviewport.add_child(character_scene_instance)
 	character_scene_instance = scene.instantiate()
 	character_scene_instance.timeline = current_timeline
 	character_subviewport.add_child(character_scene_instance)
