@@ -5,8 +5,6 @@ extends Control
 @onready var protagonist_animation_player: AnimationPlayer = $ProtagonistContainer/ProtagonistAnimationPlayer
 @onready var protagonist_scene = preload("res://dialogue/scenes/common/major_dialogue/characters/protagonist_character.tscn")
 
-var current_timeline: DialogicTimeline
-
 var character_scene_instance
 var protagonist_scene_instance
 
@@ -25,7 +23,6 @@ func clear_viewports() -> void:
 		protagonist_scene_instance.queue_free()
 	if character_scene_instance:
 		character_scene_instance.queue_free()
-	current_timeline = null
 
 func _on_timeline_ended() -> void:
 	clear_viewports()
@@ -34,7 +31,6 @@ func _on_timeline_ended() -> void:
 func setup_character_view(info: Dictionary) -> void:
 	var scene: PackedScene = load(info.scene)
 	character_scene_instance = scene.instantiate()
-	character_scene_instance.timeline = current_timeline
 	character_subviewport.add_child(character_scene_instance)
 
 func setup_protagonist_view(info: Dictionary) -> void:

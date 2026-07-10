@@ -3,8 +3,6 @@ extends DialogicBackground
 @onready var dialogue_camera: Camera3D = $DialogueCamera
 @onready var characters: Node = $Characters
 
-var timeline: DialogicTimeline
-
 func _ready() -> void:
 	Dialogic.Portraits.character_joined.connect(_on_character_joined)
 

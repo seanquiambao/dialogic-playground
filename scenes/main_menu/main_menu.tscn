@@ -13,6 +13,7 @@ script = ExtResource("1_fsom3")
 timelines = Array[ExtResource("2_uqeha")]([ExtResource("3_wem23"), ExtResource("4_3ovsr")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1420566568]
+layer = -1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=593490550]
 anchors_preset = 8
